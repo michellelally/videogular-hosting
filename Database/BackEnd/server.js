@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 //connection string
-var mongoDB = 'mongodb://michellelally:datarep2018@ds115592.mlab.com:15592/data-rep'
+var mongoDB = ''
 
 //connecting to the database
 mongoose.connect(mongoDB);
@@ -16,13 +16,13 @@ mongoose.connect(mongoDB);
 var Schema = mongoose.Schema;
 
 //How its writing the data
-var postSchema = new Schema({
+var videoSchema = new Schema({
     title: String,
     content: String
 })
 
 //Data Model
-var PostModel = mongoose.model('posts', postSchema);
+var PostModel = mongoose.model('video', videoSchema);
 
 //Here we are configuring express to use body-parser as middle-ware. 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -46,7 +46,7 @@ app.get('/', function (req, res) {
     res.send('Hello from Express');
 })
 
-app.post('/api/posts', function (req, res) {
+app.post('/api/videos', function (req, res) {
     console.log("post successful");
     console.log(req.body.title);
     console.log(req.body.content);
@@ -62,7 +62,7 @@ app.post('/api/posts', function (req, res) {
 
 });
 
-app.get('/api/posts', function (req, res) {
+app.get('/api/videos', function (req, res) {
     PostModel.find(function (err, data) {
         if (err)
             res.send(err);
@@ -71,7 +71,7 @@ app.get('/api/posts', function (req, res) {
     })
 })
 
-app.delete('/api/posts/:id', function (req, res) {
+app.delete('/api/videos/:id', function (req, res) {
     console.log(req.params.id);
     PostModel.deleteOne({ _id: req.params.id },
         function (err, data) {
