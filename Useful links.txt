@@ -4,3 +4,7 @@ Video upload on Angular
 https://cloudinary.com/documentation/angular_image_and_video_upload
 https://stackoverflow.com/questions/44386989/uploading-large-video-files-using-angular
 https://malcoded.com/posts/angular-file-upload-component-with-express
+https://medium.freecodecamp.org/how-to-make-image-upload-easy-with-angular-1ed14cb2773b
+
+videos 
+https://www.youtube.com/watch?v=DH7yrSKKzIQ
