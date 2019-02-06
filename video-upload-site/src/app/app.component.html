@@ -18,8 +18,14 @@
     <vg-fullscreen></vg-fullscreen>
   </vg-controls>
 
-  <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
-    <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+  <video #media [vgMedia]="media" [src]="currentItem.src" id="singleVideo" preload="auto" crossorigin>
   </video>
 </vg-player>
+
+<ul>
+  <li *ngFor="let item of playlist; let $index = index" (click)="onClickPlaylistItem(item, $index)" [class.selected]="item === currentItem">
+    {{ item.title }}
+  </li>
+</ul>
+
 <router-outlet></router-outlet>
