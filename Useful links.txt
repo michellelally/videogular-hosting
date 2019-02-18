@@ -8,3 +8,6 @@ https://medium.freecodecamp.org/how-to-make-image-upload-easy-with-angular-1ed14
 
 videos 
 https://www.youtube.com/watch?v=DH7yrSKKzIQ
+
+GUI
+https://material.io/archive/guidelines/material-design/introduction.html
