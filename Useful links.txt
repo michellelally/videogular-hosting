@@ -5,6 +5,17 @@ https://cloudinary.com/documentation/angular_image_and_video_upload
 https://stackoverflow.com/questions/44386989/uploading-large-video-files-using-angular
 https://malcoded.com/posts/angular-file-upload-component-with-express
 https://medium.freecodecamp.org/how-to-make-image-upload-easy-with-angular-1ed14cb2773b
+https://stackoverflow.com/questions/36722251/record-video-and-upload-to-firebase
+
 
 videos 
 https://www.youtube.com/watch?v=DH7yrSKKzIQ
+
+Videogular
+https://www.toptal.com/angular-js/angular-video-player-videogular - media framework
+http://www.videogular.com/
+http://videogular.github.io/videogular2/docs/getting-started/how-videogular-works.html
+
+
+
+https://grokonez.com/frontend/angular/angular-4-firebase-upload-file-to-storage
