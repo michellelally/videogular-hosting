@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 
@@ -22,9 +23,12 @@ export const firebaseCongig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    { provide: StorageBucket, useValue: 'bucket' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
