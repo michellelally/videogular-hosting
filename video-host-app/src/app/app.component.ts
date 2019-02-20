@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private storage: AngularFireStorage) {}
   uploadFile(event) {
     const file = event.target.files[0];
-    const filePath = 'C:\Users\Mark\Desktop\vid.mp4';
+    const filePath = './uploads/';
     const fileRef = this.storage.ref(filePath);
     const task = this.storage.upload(filePath, file);
 

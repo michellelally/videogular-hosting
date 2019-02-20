@@ -27,7 +27,7 @@ export const firebaseCongig = {
     AngularFireStorageModule
   ],
   providers: [
-    { provide: StorageBucket, useValue: 'bucket' }
+    { provide: StorageBucket, useValue: 'ppit-436ab.appspot.com' }
   ],
   bootstrap: [AppComponent]
 })
