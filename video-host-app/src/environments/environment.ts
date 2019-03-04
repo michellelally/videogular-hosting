@@ -4,15 +4,15 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyAfzxsONF5agbyZwL5ziKye5YCsy7gQ2Zk",
-    authDomain: "ppit-436ab.firebaseapp.com",
-    databaseURL: "https://ppit-436ab.firebaseio.com",
-    projectId: "ppit-436ab",
-    storageBucket: "ppit-436ab.appspot.com",
-    messagingSenderId: "1065215763712"
-
+  firebaseConfig : {
+    apiKey: "AIzaSyDlSaImCK9tVSHqpqPlZ_WA-FZ5YmY_IHg",
+    authDomain: "gmit-video-host.firebaseapp.com",
+    databaseURL: "https://gmit-video-host.firebaseio.com",
+    projectId: "gmit-video-host",
+    storageBucket: "",
+    messagingSenderId: "305664337851"
   }
+
 };
 
 /*

@@ -1,73 +1,40 @@
 import { Component } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
-<<<<<<< HEAD
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { finalize } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-
-export interface Item { url: string; }
-=======
-import { finalize } from 'rxjs/operators';
-import { Observable } from 'rxjs';
->>>>>>> aef14e8c0510641b181805c90dbd749ac152ee53
+import { OnInit } from '@angular/core';
+import { VideoService } from 'src/app/video.service';
+import { Video } from 'src/app/video.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-
-
 export class AppComponent {
-<<<<<<< HEAD
+  title = 'video-host-app';
 
+  videos: Video[];
 
+  constructor(private vs: VideoService) { }
 
-uploadPercent: Observable<number>;
-downloadURL: Observable<string>;
-items: Observable<Item[]>;
-  private itemsCollection: AngularFirestoreCollection<Item>;
-
-constructor(private storage: AngularFireStorage, db: AngularFirestore) {
-  this.itemsCollection = db.collection<Item>('uploads');
-  this.items = this.itemsCollection.valueChanges();
-}
-
-addItem(item: Item) {
-  this.itemsCollection.add(item);
-}
-
-uploadFile(event) {
-  const file = event.target.files[0];
-  const filePath = '';
-  const fileRef = this.storage.ref(filePath);
-  const task = this.storage.upload(filePath, file);
-
-  // observe percentage changes
-  this.uploadPercent = task.percentageChanges();
-  // get notified when the download URL is available
-  task.snapshotChanges().pipe(
-    finalize(() => this.downloadURL = fileRef.getDownloadURL())
-  )
-    .subscribe()
-}
-=======
-  uploadPercent: Observable<number>;
-  downloadURL: Observable<string>;
-  constructor(private storage: AngularFireStorage) {}
-  uploadFile(event) {
-    const file = event.target.files[0];
-    const filePath = './uploads/';
-    const fileRef = this.storage.ref(filePath);
-    const task = this.storage.upload(filePath, file);
-
-    // observe percentage changes
-    this.uploadPercent = task.percentageChanges();
-    // get notified when the download URL is available
-    task.snapshotChanges().pipe(
-        finalize(() => this.downloadURL = fileRef.getDownloadURL() )
-     )
-    .subscribe()
+  ngOnInit() {
+    this.vs.getVideos().subscribe(data => {
+      this.videos = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Video;
+      })
+    });
   }
->>>>>>> aef14e8c0510641b181805c90dbd749ac152ee53
+
+  create(video: Video){
+      this.vs.createVideo(video);
+  }
+
+  update(video: Video) {
+    this.vs.updateVideo(video);
+  }
+
+  delete(id: string) {
+    this.vs.deleteVideo(id);
+  }
 }

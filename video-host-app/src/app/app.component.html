@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-<input type="file" (change)="uploadFile($event)" />
-    <div>{{ uploadPercent | async }}</div>
-    <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>URL</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let video of videos">
+      <td>{{video.name}}</td>
+      <td>{{video.url}}</td>
+      <td>
+          <button (click)="delete(video.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    <ul>
-        <li class="text" *ngFor="let item of items | async">
-          {{item.name}}
-        </li>
-      </ul>
-=======
-<div>
-  <h1>TEst font</h1>
-  <img src="./assets/5.jpg" alt="picture">
-</div>
-<input type="file" (change)="uploadFile($event)" />
-    <div>{{ uploadPercent | async }}</div>
-    <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
->>>>>>> aef14e8c0510641b181805c90dbd749ac152ee53
+
+<router-outlet></router-outlet>
