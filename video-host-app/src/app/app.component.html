@@ -1,3 +1,4 @@
+<h2>Videos List</h2>
 <table>
   <thead>
     <th>Name</th>
@@ -7,12 +8,16 @@
     <tr *ngFor="let video of videos">
       <td>{{video.name}}</td>
       <td>{{video.url}}</td>
-      <td>
-          <button (click)="delete(video.id)">Delete</button>
-      </td>
+    </tr>
+    <tr>
+      <button (click)="delete(video.id)">Delete</button>
+    </tr>
+    <tr>
+      <button [routerLink]="['/upload']">Upload Videos</button>
     </tr>
   </tbody>
 </table>
 
+<br>
 
 <router-outlet></router-outlet>
