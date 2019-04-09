@@ -6,15 +6,18 @@ import { Video } from 'src/app/video.model';
   providedIn: 'root'
 })
 export class VideoService {
-
+  
   constructor(private firestore: AngularFirestore) { }
+
+  id: string;
 
   getVideos() {
     return this.firestore.collection('videos').snapshotChanges();
   }
 
   createVideo(video: Video) {
-    return this.firestore.collection('videos').add(video);
+    this.id = String(Date.now().toPrecision);
+    return this.firestore.collection('videos').doc(this.id).set(video);
   }
 
   updateVideo(video: Video) {

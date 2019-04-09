@@ -1,5 +1,6 @@
 <form (submit)="onSubmit(videoForm)" #videoForm="ngForm">
-    <input type="file" name="video" ngModel #video="ngModel">`
+    <input type="url" name="url" ngModel #ur;="ngModel">
+    <input type="text" name="name" ngModel #name="ngModel">
     <br>
     <button type="submit">Save</button>
 </form>

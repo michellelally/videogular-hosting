@@ -10,6 +10,7 @@ https://www.youtube.com/watch?v=DH7yrSKKzIQ
 GUI
 https://material.io/archive/guidelines/material-design/introduction.html
 https://www.youtube.com/watch?v=xHkPQCSJDaw
+https://www.techiediaries.com/angular-material-table/
 
 Firebase
 https://firebase.google.com/docs/firestore/quickstart

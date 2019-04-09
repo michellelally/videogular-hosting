@@ -17,7 +17,7 @@ export class UploadVideoComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    this.vs.createVideo(form.value.word);
+    this.vs.createVideo(form.value);
     console.log(form.value);
     form.resetForm();
   }

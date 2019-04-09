@@ -8,12 +8,11 @@
     <tr *ngFor="let video of videos">
       <td>{{video.name}}</td>
       <td>{{video.url}}</td>
+      <td><button (click)="delete(video.id)">Delete</button></td>
     </tr>
+    <br>
     <tr>
-      <button (click)="delete(video.id)">Delete</button>
-    </tr>
-    <tr>
-      <button [routerLink]="['/upload']">Upload Videos</button>
+        <button [routerLink]="['/upload']">Upload Videos</button>
     </tr>
   </tbody>
 </table>
