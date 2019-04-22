@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
 
+Run `npm install --save firebase @angular/fire` to install Firebase
+
+Run `npm install videogular2 --save` to install Videogular
+
+Run `npm install @types/core-js --save-dev` to install type definitions for Videogular
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -13,10 +19,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-Run `npm install --save firebase @angular/fire` to install Firebase
-Run `npm install videogular2 --save` to install Videogular
-Run `npm install @types/core-js --save-dev` to install type definitions for Videogular
 
 ## Running unit tests
 
