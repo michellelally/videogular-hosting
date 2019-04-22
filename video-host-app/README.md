@@ -14,6 +14,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+Run `npm install --save firebase @angular/fire` to install Firebase
+Run `npm install videogular2 --save` to install Videogular
+Run `npm install @types/core-js --save-dev` to install type definitions for Videogular
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
