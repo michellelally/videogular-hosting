@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Media {
+export interface Video {
   title: string;
   src: string;
   type: string;
@@ -19,10 +19,10 @@ export class WatchVideoComponent implements OnInit {
   ngOnInit() {
   }
 
-  playlist: Array<Media> = [
+  playlist: Array<Video> = [
     {
-      title: 'Pale Blue Dot',
-      src: 'http://static.videogular.com/assets/videos/videogular.mp4',
+      title: 'Glue',
+      src: '../../assets/videoplayback.mp4',
       type: 'video/mp4'
     },
     {
@@ -38,9 +38,9 @@ export class WatchVideoComponent implements OnInit {
   ];
 
   currentIndex = 0;
-  currentItem: Media = this.playlist[this.currentIndex];
+  currentItem: Video = this.playlist[this.currentIndex];
 
-  onClickPlaylistItem(item: Media, index:number) {
+  onClickPlaylistItem(item: Video, index:number) {
     this.currentIndex = index;
     this.currentItem = item;
   }

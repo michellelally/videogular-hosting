@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { VideoService } from '../services/video.service';
 
-
-
 @Component({
   selector: 'app-upload-video',
   templateUrl: './upload-video.component.html',

@@ -1,5 +1,6 @@
 export class Video {
     id: string
-    url: string
-    name: string
+    title: string
+    src: string
+    type: string
 }

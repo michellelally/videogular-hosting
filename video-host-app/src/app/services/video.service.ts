@@ -16,7 +16,7 @@ export class VideoService {
   }
 
   createVideo(video: Video) {
-    this.id = String(Date.now().toPrecision);
+    this.id = String(Date.now());
     return this.firestore.collection('videos').doc(this.id).set(video);
   }
 

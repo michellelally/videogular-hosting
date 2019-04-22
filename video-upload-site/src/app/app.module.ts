@@ -6,24 +6,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { VgCoreModule } from 'videogular2/core';
 import { VgControlsModule } from 'videogular2/controls';
-import { UploadVideoComponent } from './upload-video/upload-video.component';
 import { WatchVideoComponent } from './watch-video/watch-video.component';
 
 const appRoutes: Routes = [
   {
     path: 'watch',
     component: WatchVideoComponent
-  },
-  {
-    path: 'upload',
-    component: UploadVideoComponent
   }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    UploadVideoComponent,
     WatchVideoComponent
   ],
   imports: [

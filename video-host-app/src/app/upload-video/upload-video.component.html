@@ -1,9 +1,18 @@
 <form (submit)="onSubmit(videoForm)" #videoForm="ngForm">
-    <input type="url" name="url" ngModel #ur;="ngModel">
-    <input type="text" name="name" ngModel #name="ngModel">
+    Title
+    <input type="text" name="title" ngModel #title="ngModel">
+    <br>
+    Source/URL
+    <input type="text" name="src" ngModel #src="ngModel">
+    <br>
+    Type
+    <input type="text" name="type" ngModel #type="ngModel">
     <br>
     <button type="submit">Save</button>
 </form>
 
-<!-- <div>{{ uploadPercent | async }}</div>
-<a [href]="downloadURL | async">{{ downloadURL | async }}</a> -->
+<!-- 
+<input name="file" type="file"
+   class="file-upload" data-cloudinary-field="image_id"
+   data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/>
+-->

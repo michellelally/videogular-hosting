@@ -14,8 +14,15 @@ import { FirestoreSettingsToken} from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { UploadVideoComponent } from './upload-video/upload-video.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { WatchVideoComponent } from './watch-video/watch-video.component';
+import { VgCoreModule } from 'videogular2/core';
+import { VgControlsModule } from 'videogular2/controls';
 
 const appRoutes: Routes = [
+  {
+    path: 'watch',
+    component: WatchVideoComponent
+  },
   {
     path: 'upload',
     component: UploadVideoComponent
@@ -25,7 +32,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UploadVideoComponent
+    UploadVideoComponent,
+    WatchVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ const appRoutes: Routes = [
     AngularFireDatabaseModule,
     FormsModule,
     ReactiveFormsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    VgCoreModule,
+    VgControlsModule
     // MatTableModule       
   ],
   providers: [AngularFirestore, { provide: FirestoreSettingsToken, useValue: {} }],
