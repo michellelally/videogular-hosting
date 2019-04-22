@@ -17,6 +17,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WatchVideoComponent } from './watch-video/watch-video.component';
 import { VgCoreModule } from 'videogular2/core';
 import { VgControlsModule } from 'videogular2/controls';
+import { VideosListComponent } from './videos-list/videos-list.component';
 
 const appRoutes: Routes = [
   {
@@ -27,13 +28,19 @@ const appRoutes: Routes = [
     path: 'upload',
     component: UploadVideoComponent
   }
+  ,
+  {
+    path: 'list',
+    component: VideosListComponent
+  }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadVideoComponent,
-    WatchVideoComponent
+    WatchVideoComponent,
+    VideosListComponent
   ],
   imports: [
     BrowserModule,
