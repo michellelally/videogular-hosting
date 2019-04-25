@@ -1,8 +1,13 @@
+body{
+    background-color: powderblue;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: powderblue;
   
     li {
         padding: 10px;
@@ -17,3 +22,19 @@ ul {
         }
     }
  }
+
+vg-player {
+    width: 50%;
+    justify-content: center;
+    margin:0 auto;  
+    text-align: center; 
+
+}
+h1 {
+    color: blue;
+    font: Georgia, serif;
+}
+h3 {
+    color: red;
+    font: italic bold Georgia, serif;
+}

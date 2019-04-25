@@ -5,6 +5,7 @@ table {
     justify-content: center;
     margin:0 auto;  
     text-align: center; 
+    background-color: powderblue;
 }
 
 button {
@@ -14,4 +15,17 @@ button {
     border-color: rgb(0, 174, 255);
     padding: 10px;
     border-radius: 5px;
+}
+
+h1 {
+    color: blue;
+    font: Georgia, serif;
+}
+h2 {
+    color: red;
+    font: italic bold Georgia, serif;
+}
+h3 {
+    color: red;
+    font: italic bold Georgia, serif;
 }

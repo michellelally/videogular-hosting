@@ -1,0 +1,45 @@
+body{
+    justify-content: center;
+    margin:0 auto;  
+    text-align: center; 
+}
+
+button {
+    margin: 1px;
+    background-color:  rgba(0, 174, 255, 0.301);
+    border-style: solid;
+    border-color: rgb(0, 174, 255);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: blue;
+    font: Georgia, serif;
+}
+
+table{
+    justify-content: center;
+    background-color: powderblue;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    width: 90%;
+
+    th{
+        color: red;
+        font: italic bold Georgia, serif;
+    }
+
+    td{
+        border: 1px solid black;
+    }
+}
+
+tr:hover {
+    background-color:palegoldenrod;
+}
+
+td:hover {
+    background-color:palegreen;
+}
