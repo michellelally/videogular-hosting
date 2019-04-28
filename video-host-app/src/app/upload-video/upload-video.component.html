@@ -1,21 +1,21 @@
-<h1>Upload Videos</h1>
-<h3>Please enter the title of the video, the url of where it can be found and the type e.g. video/mp4, video/mov, video/ogg</h3>
+<body>
+    <h1>Upload Videos</h1>
+    <h3>Please enter the title of the video, the url of where it can be found and the type e.g. video/mp4, video/mov,
+        video/ogg</h3>
 
-<form (submit)="onSubmit(videoForm)" #videoForm="ngForm">
-    Title
-    <input type="text" name="title" ngModel #title="ngModel">
-    <br>
-    Source/URL
-    <input type="text" name="src" ngModel #src="ngModel">
-    <br>
-    Type
-    <input type="text" name="type" ngModel #type="ngModel">
-    <br>
-    <button type="submit">Save</button>
-</form>
+    <form (submit)="onSubmit(videoForm)" #videoForm="ngForm">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" name="title" ngModel #title="ngModel"></td>
+            </tr>
+            <tr>
+                <td>Source/URL</td>
+                <td><input type="text" name="src" ngModel #src="ngModel"></td>
+            </tr>
+        </table>
+        <br>
+        <button type="submit">Save</button>
+    </form>
 
-<!-- 
-<input name="file" type="file"
-   class="file-upload" data-cloudinary-field="image_id"
-   data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/>
--->
+</body>

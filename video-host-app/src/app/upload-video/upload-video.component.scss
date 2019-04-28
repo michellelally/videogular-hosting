@@ -1,21 +1,43 @@
 form {
-    background-color: powderblue;
     font: 1em sans-serif;
     text-align: center;
 }
 h1 {
-    color: blue;
+    color: #357DED;
     font: Georgia, serif;
 }
 h3 {
-    color: red;
+    color: #BC2B4D;
     font: italic bold Georgia, serif;
 }
 button {
     margin: 1px;
-    background-color:  rgba(0, 174, 255, 0.4);
+    background-color:  #70BFCC;
     border-style: solid;
-    border-color: rgb(0, 174, 255);
+    border-color: #38B6C9;
     padding: 10px;
     border-radius: 5px;
+}
+
+body {
+    padding: 50px;
+    text-align:center;
+}
+
+table{
+    border: 1px solid #C4727D;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0px auto;
+    border-style: solid;
+    background-color: powderblue;
+
+    td {
+        padding: 10px;
+    }
+}
+
+input {
+    height: 25px;
 }

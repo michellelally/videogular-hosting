@@ -1,3 +1,4 @@
+<div id="wrapper">
 <body>
   <h1>Watch Videos</h1>
   <h3>To watch a video, click on its name in the list under the player</h3>
@@ -25,7 +26,7 @@
     <video #media [vgMedia]="media" [src]="currentItem.src" id="singleVideo" preload="auto" crossorigin>
     </video>
   </vg-player>
-
+  <br>
   <ul>
     <li *ngFor="let item of playlist; let $index = index" (click)="onClickPlaylistItem(item, $index)" [class.selected]="item === currentItem">
       {{ item.title }}
@@ -34,3 +35,4 @@
 
   <router-outlet></router-outlet>
 </body>
+</div>

@@ -6,26 +6,32 @@ table {
     margin:0 auto;  
     text-align: center; 
     background-color: powderblue;
+    padding: 20px;
+
+}
+
+body {
+    padding: 50px;
 }
 
 button {
     margin: 1px;
-    background-color:  rgba(0, 174, 255, 0.4);
+    background-color:  #70BFCC;
     border-style: solid;
-    border-color: rgb(0, 174, 255);
+    border-color: #38B6C9;
     padding: 10px;
     border-radius: 5px;
 }
 
 h1 {
-    color: blue;
+    color: #357DED;
     font: Georgia, serif;
 }
 h2 {
-    color: red;
+    color: #B24C63;
     font: italic bold Georgia, serif;
 }
 h3 {
-    color: red;
+    color: #B24C63;
     font: italic bold Georgia, serif;
 }
